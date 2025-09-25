@@ -1,0 +1,293 @@
+Ternary and nested ternary:
+
+
+
+
+
+
+Swapping of 2 num:
+1.(with temp)
+public class Main{
+    public static void main(String [] args){
+        int a = 10;
+        int b = 30;
+        int c = a;
+        a=b;
+        b=c;
+        System.out.println(a+" "+b);
+    }
+}
+
+2.(without 3rd variable)
+1)Addn and Sub
+public class Main{
+    public static void main(String [] args){
+        int a = 10;
+        int b = 30;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println(a+" "+b);
+    }
+}
+
+2)Mul and div
+public class Main{
+    public static void main(String [] args){
+        int a = 10;
+        int b = 30;
+        a=a*b;
+        b=ab;
+        a=a/b;
+        System.out.println(a+" "+b);
+    }
+}
+
+3)Ex Or
+public class Main{
+    public static void main(String [] args){
+        int a = 10;
+        int b = 30;
+        a=a^b;
+        b=a^b;
+        a=a^b;
+        System.out.println(a+" "+b);
+    }
+}
+
+
+To get user input
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a value");
+        int a = scan.nextInt();
+        System.out.println("Enter b value");
+        int b = scan.nextInt();
+        System.out.println("A value is "+a+" "+"B value is "+b);
+    }
+}
+
+nextInt()
+nextByte()
+nextShort()
+nextFloat()
+nextLong()
+nextDouble()
+nextBoolean()
+
+
+User input string
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        String str  = scan.nextLine(); //if we use string the output will be displayed only till the space.
+        System.out.println(str);
+    }
+}
+
+
+Return the char at specified posn
+import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        char str  = scan.next().charAt(0);
+        System.out.println(str);
+    }
+}
+
+
+next() - termination is space
+nextLine() = termination is enter
+
+
+To get a number input first and then a string input
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        scan.nextLine();
+        String s = scan.nextLine();
+        System.out.println(a+" "+s);
+    }
+}
+
+conditional statements:
+if, if else, if else if, switch, nested if
+
+
+if:
+checks all conds...if true prints body
+if(condn){
+stmts
+}
+
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        if(a>10){
+        System.out.println(a);
+ 	}
+    }
+}
+
+if else:
+checks if cond...if true prints body...else prints else body
+if(condn){
+stmts
+}
+else{
+stmts
+}
+
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        if(a>10)
+        System.out.println("great");
+        else{
+            System.out.println("less");
+        }
+    }
+}
+
+else if:
+same concept
+if(condn){
+stmts
+}
+else if(condn){
+stmts
+}
+else if(condn){
+stmts
+}
+else{
+stmts
+}
+
+Checking for lesser value using if else if:
+ import java.util.*;//for using all func in util use '*'
+ public class Main{
+    public static void main(String [] args){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        if(a<b&&a<c){
+            System.out.println(a);
+        }
+        else if(b<c){
+            System.out.println(b);
+        }
+        else{
+            System.out.println(c);
+        }
+    }
+}
+
+
+Switch case
+switch(value){
+case 1:
+stmt
+break;
+case 2:
+stmt
+break;
+case 3:
+stmt
+break;
+default:
+stmt
+}
+
+case must only be integer
+
+break - without break all the stmts will be executed, with break it will wait for enter
+
+
+format specifier
+need only 2 numbers after decimal point
+import java.util.*;
+public class Main{
+ 	public static void main(String [] args){
+ 		Scanner sc = new Scanner(System.in);
+ 		float f=56.7868f;
+ 		System.out.printf("%.2f",f);
+}
+}
+
+
+
+
+
+Math.abs() -- converts negative to positive....accepts->int, long, float, double
+Math.max or Math.min () -- give 2 value and get which is max of min.... accepts->int, long, float, double
+
+
+Powers and rooting
+Math.pow -- give 2 values, 1st is the base 2nd is the power, use type casting if needed.... default -> double
+Math.sqrt -- one value and returns sqroot.... default -> double
+Math.cbrt -- give a value and returns the cube root.... default -> double
+
+
+
+
+rounding
+Math.ceil(double) -> rounds and gives the upper value if 5.6 gives 6
+Math.floor(double) -> rounds and gives the lower value if 5.6 gives 5
+Math.round(float) -> int, Math.round(double) -> long
+Math.random() -> double...generates random values
+
+
+looping
+for - known number of iterations
+for(;initialization;cond;updation){
+stmt
+}
+
+
+tricks
+int a=1;
+for(;a<=10;System.out.println(a)){
+a++;
+}
+op:2 to 11
+
+int a=1;
+for(;a<=10;a++){
+Sys.out(a);
+}
+Sys.out(a);
+op:1 to 11
+
+
+int a=1;
+for(;a<=10;a++);{
+System.out.println(a)}
+op:11
+
+
+for(int a=1;a<=10;Sys.out(a),a++)
+op:1 to 10
+
+ 
+ 2. while
+while(condn){
+stmt
+}
+
+int a=1;
+while(a<=10){
+Sys.out(a++);
+}
+op:1 to 10

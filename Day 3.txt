@@ -1,0 +1,555 @@
+patterns:
+rule:dont touch the row for loop, only change with col for loop
+
+1.
+*****
+*****
+*****
+*****
+*****
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+        
+
+
+2.
+*
+**
+***
+****
+*****
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        for(int row=0;row<a;row++){
+            for(int col=0;col<=row;col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+        
+
+
+3.
+*****
+****
+***
+**
+*
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        for(int row=0;row<a;row++){
+            for(int col=0;col<a-row;col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+       
+
+4.
+*
+***
+*****
+*******
+*********
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        for(int row=0;row<a;row++){
+            for(int col=0;col<(2*row)+1;col++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+     
+(or)
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        int t=1;
+        for(int row=0;row<a;row++){
+            for(int col=0;col<t;col++){
+                System.out.print("*");
+            }
+            t=t+2;
+            System.out.println();
+        }
+    }
+}
+        
+
+
+
+5.
+*********
+*******
+*****
+***
+*
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        int t=2*a-1;
+        for(int row=0;row<a;row++){
+            for(int col=0;col<t;col++){
+                System.out.print("*");
+            }
+            t=t-2;
+            System.out.println();
+        }
+    }
+}
+         
+
+6.
+    *
+   * *
+  * * *
+ * * * *
+* * * * *    
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        
+        for(int row=0;row<a;row++){
+            for(int col=0;col<a-row-1;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("* ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+        
+
+
+7.
+* * * * *  
+ * * * *
+  * * * 
+   * * 
+    *  
+
+import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        
+        for(int row=0;row<a;row++){
+            for(int col=0;col<row;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<a-row;col++){
+                System.out.print("* ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+8.
+    *
+   **
+  ***
+ ****
+*****
+     
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        
+        for(int row=0;row<a;row++){
+            for(int col=0;col<a-row;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+          
+
+9.
+*****
+ ****
+  ***
+   **
+    *
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        
+        for(int row=0;row<a;row++){
+            for(int col=0;col<row;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<a-row;col++){
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+          
+
+
+10.
+     *
+    * *
+   * * * 
+  * * * *    
+ * * * * * 
+  * * * *
+   * * *
+    * *
+     *
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a-1;row++){
+            for(int col=0;col<a-row-1;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("* ");
+            }
+            
+            System.out.println();
+        }
+        
+        for(int row=0;row<a;row++){
+            for(int col=0;col<row;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<a-row;col++){
+                System.out.print("* ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+          
+
+For shape based patterns use matrix number trick
+0,0 0,1 0,2 0,3
+1,0 1,1 1,2 1,3
+2,0 2,1 2,2 2,3
+3,0 3,1 3,2 3,3
+
+use this and draw the shape above this to get the posn of the pattern
+
+
+11.
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                if(row==0||row==a-1||col==0||col==a-1){
+                    System.out.print("* ");
+                }
+                else{
+                System.out.print("  ");
+            }
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+}
+
+
+12.
+*
+* *
+*   *
+*     *
+* * * * *
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                if(row==a-1||col==0||col==row){
+                    System.out.print("* ");
+                }
+                else{
+                System.out.print("  ");
+            }
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+}
+       
+
+13.
+        *
+      * *
+    *   *
+  *     *
+* * * * *
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                if(row==a-1||col==a-1||col+row==a-1){
+                    System.out.print("* ");
+                }
+                else{
+                System.out.print("  ");
+            }
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+}
+       
+
+
+14.
+       
+M - shape
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                if(col==0||col==a-1||(col+row==a-1&&row<=a/2)||(col==row&&row<=a/2)){
+                    System.out.print("* ");
+                }
+                else{
+                System.out.print("  ");
+            }
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+}
+       
+
+
+15. 
+
+K - shape
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                if(col==0||(col+row==a/2&&row<=a/2)||(row>a/2&&row-col==a/2)){
+                    System.out.print("* ");
+                }
+                else{
+                System.out.print("  ");
+            }
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+}
+
+
+16.
+to print numbers... eg:
+1111
+2222
+3333
+4444
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                
+                    System.out.print(row+1);
+            }
+                System.out.println();
+            
+            
+            }
+           
+            
+            System.out.println();
+        }
+    }
+
+       
+
+17.
+to print alphabets... eg:
+AAA
+BBB
+CCC
+
+ import java.util.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc=new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = 65;
+         for(int row=0;row<a;row++){
+            for(int col=0;col<a;col++){
+                
+                    System.out.print((char)(b));
+            }
+            b++;
+                System.out.println();
+            
+            
+            }
+           
+            
+            
+        }
+    }
+
+       
+
+
+
+
+if you need last digit...d%10
+if you need last 2 digits...d%100
+
+if you need 1st element...do a while(n>9)
+                              n=n/10;
+if you need 1st 2 elements...do a while(n>99)
+                                n=n/10;
+
+
+
+
+ARRAY:
+1.collection of values in a single variable
+2.similar data type
+3.fixed size
+4.conyinuous memory allocation
+5.index of an array always starts with 0 and ends with n-1
+
+
+Syntax:
+datatype variable_name []=new datatype[size];
+int a[]=new int[5]; //declaration
+int a[]={1,2,3,4,5};
+int c[]=new int[]{1,2,3,4,5};
+
+calling a posn which is not there in array will give an array index out of bound exception
+
+
+
+for each loop in array:
+for(int x:arr){
+Sys.out(x+" ");
+}
+the value in arr will be assigned to x one by one
+
+
+
+to find min or max value in the same loop in array:
+
+to find max:
+int max=Integer.MIN_VALUE;
+for(int i=0;i<size;i++){
+arr[i]=sc.nextInt();
+if(arr[i]>max){
+max=arr[i];
+}
+}
+
+
+       
